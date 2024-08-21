@@ -50,5 +50,22 @@ def get_ip_info():
         "source": "AI悦创·API：ip.bornforthis.cn"
     })
 
+
+@app.route('/Local', methods=['GET'])
+def get_local_ip_info():
+    # 获取客户端的IP地址
+    ip = request.remote_addr
+    geo_info = get_geo_info(ip)
+    if not geo_info:
+        return jsonify({"code": 404, "msg": "无法获取地理位置信息", "data": {}})
+
+    return jsonify({
+        "code": 200,
+        "data": geo_info,
+        "msg": "success",
+        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "source": "AI悦创·API：ip.bornforthis.cn"
+    })
+
 if __name__ == '__main__':
     app.run(debug=True)
