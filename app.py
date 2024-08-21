@@ -47,7 +47,7 @@ def get_ip_info():
         "data": geo_info,
         "msg": "success",
         "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "source": "AI悦创·API：api.bornforthis.cn"
+        "source": "AI悦创·API：ip.bornforthis.cn"
     })
 
 if __name__ == '__main__':
