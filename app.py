@@ -4,7 +4,7 @@ from datetime import datetime
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://blog.bornforthis.cn"}})
+CORS(app, resources={r"/*": {"origins": ["https://blog.bornforthis.cn", "http://127.0.0.1:4000"]}})
 
 def get_geo_info(ip):
     # 使用免费API获取地理位置信息
