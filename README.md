@@ -92,3 +92,19 @@ https://ip.bornforthis.cn/get_ip_info?ip=112.51.213.94
 ```
 
 这个文档结构清晰地展示了API的使用方法，包括如何发送请求、返回数据的结构和每个字段的含义。
+
+## 开发
+
+本项目还在持续优化中，欢迎点击 Star，你的 Star 是我最大的鼓励！
+
+## 建议
+
+如果私人使用，则建议把请求头限制成自己的域名，可以防止恶意调用。
+
+```python
+# 指定域名/IP 访问
+CORS(app, resources={r"/*": {"origins": ["https://blog.bornforthis.cn", "http://127.0.0.1:4000"]}})
+
+# 允许任何来源访问
+CORS(app, resources={r"/*": {"origins": "*"}})
+```
