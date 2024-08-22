@@ -20,7 +20,7 @@ def get_geo_info(ip):
         "continent": data.get("continent", ""),
         "country_english": data.get("country", ""),
         "country": data.get("country", ""),
-        "prov": data.get("regionName", ""),
+        "prov": data.get("regionName", "") + '省',
         "city": data.get("city", ""),
         "district": data.get("district", ""),
         "isp": data.get("isp", ""),
